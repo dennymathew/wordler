@@ -9,25 +9,38 @@ import XCTest
 @testable import Wordler
 
 class WordlerTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testSomething() {
+        let analyser = Analyser(.init("rosin"))
+        var word = analyser.currentWord
+        word.updatePosition(0, with: .init("r", status: .perfect))
+        word.updatePosition(1, with: .init("o", status: .perfect))
+        word.updatePosition(2, with: .init("s", status: .bad))
+        word.updatePosition(3, with: .init("i", status: .perfect))
+        word.updatePosition(4, with: .init("n", status: .perfect))
+        analyser.updateWord(word)
+        let rules = analyser.getRules()
+        getWords(rules, mustHave: analyser.mustHave) { words in
+            print(words)
+        }
+        sleep(4)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func getWords(_ pattern: String, mustHave: [String], matchingWords: @escaping (([String]) -> Void)) {
+        let client = APIClient<RequestModel, ResponseModel>()
+        var requestModel = RequestModel(letters: 5, limit: 10000, page: 1, frequencymin: 3)
+        requestModel.letterPattern = pattern
+        client.request("", parameters: requestModel) { model in
+            var words = model.results?.data ?? []
+            if !mustHave.isEmpty {
+                mustHave.forEach { letter in
+                    words = words.filter({ $0.contains(letter) })
+                }
+            }
+            print(words)
+            matchingWords(words)
+        } failure: { error in
+            print(error.localizedDescription)
+            matchingWords([])
         }
     }
-
 }

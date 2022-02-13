@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		7D19BE6727B79674001BBCD7 /* WordlerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE6627B79674001BBCD7 /* WordlerApp.swift */; };
-		7D19BE6927B79674001BBCD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE6827B79674001BBCD7 /* ContentView.swift */; };
+		7D19BE6927B79674001BBCD7 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE6827B79674001BBCD7 /* GameView.swift */; };
 		7D19BE6B27B79676001BBCD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D19BE6A27B79676001BBCD7 /* Assets.xcassets */; };
 		7D19BE6E27B79676001BBCD7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D19BE6D27B79676001BBCD7 /* Preview Assets.xcassets */; };
 		7D19BE7827B79676001BBCD7 /* WordlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE7727B79676001BBCD7 /* WordlerTests.swift */; };
 		7D19BE8227B79676001BBCD7 /* WordlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE8127B79676001BBCD7 /* WordlerUITests.swift */; };
 		7D19BE8427B79676001BBCD7 /* WordlerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE8327B79676001BBCD7 /* WordlerUITestsLaunchTests.swift */; };
+		7D19BE9227B79792001BBCD7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7D19BE9127B79792001BBCD7 /* Alamofire */; };
+		7D19BE9727B79848001BBCD7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE9627B79848001BBCD7 /* Service.swift */; };
+		7D19BE9927B79857001BBCD7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE9827B79857001BBCD7 /* APIClient.swift */; };
+		7D19BE9B27B89BAA001BBCD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE9A27B89BAA001BBCD7 /* Constants.swift */; };
+		7D19BE9D27B89EA1001BBCD7 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE9C27B89EA1001BBCD7 /* RequestModel.swift */; };
+		7D19BE9F27B89EA9001BBCD7 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BE9E27B89EA9001BBCD7 /* ResponseModel.swift */; };
+		7D19BEA127B90772001BBCD7 /* Analyser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BEA027B90772001BBCD7 /* Analyser.swift */; };
+		7D19BEA327B90786001BBCD7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BEA227B90786001BBCD7 /* Models.swift */; };
+		7D19BEA527B907A2001BBCD7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BEA427B907A2001BBCD7 /* ViewModel.swift */; };
+		7D19BEA727B916A1001BBCD7 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BEA627B916A1001BBCD7 /* WordView.swift */; };
+		7D19BEA927B91723001BBCD7 /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19BEA827B91723001BBCD7 /* LetterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +47,7 @@
 /* Begin PBXFileReference section */
 		7D19BE6327B79674001BBCD7 /* Wordler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D19BE6627B79674001BBCD7 /* WordlerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordlerApp.swift; sourceTree = "<group>"; };
-		7D19BE6827B79674001BBCD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7D19BE6827B79674001BBCD7 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		7D19BE6A27B79676001BBCD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D19BE6D27B79676001BBCD7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D19BE7327B79676001BBCD7 /* WordlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +55,16 @@
 		7D19BE7D27B79676001BBCD7 /* WordlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D19BE8127B79676001BBCD7 /* WordlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordlerUITests.swift; sourceTree = "<group>"; };
 		7D19BE8327B79676001BBCD7 /* WordlerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordlerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7D19BE9627B79848001BBCD7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7D19BE9827B79857001BBCD7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		7D19BE9A27B89BAA001BBCD7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7D19BE9C27B89EA1001BBCD7 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		7D19BE9E27B89EA9001BBCD7 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		7D19BEA027B90772001BBCD7 /* Analyser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analyser.swift; sourceTree = "<group>"; };
+		7D19BEA227B90786001BBCD7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		7D19BEA427B907A2001BBCD7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7D19BEA627B916A1001BBCD7 /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
+		7D19BEA827B91723001BBCD7 /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D19BE9227B79792001BBCD7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				7D19BE6627B79674001BBCD7 /* WordlerApp.swift */,
-				7D19BE6827B79674001BBCD7 /* ContentView.swift */,
+				7D19BE9327B797A7001BBCD7 /* Networking */,
+				7D19BE9527B797EB001BBCD7 /* Components */,
+				7D19BE9427B797C1001BBCD7 /* Scenes */,
+				7D19BE6827B79674001BBCD7 /* GameView.swift */,
+				7D19BEA627B916A1001BBCD7 /* WordView.swift */,
+				7D19BEA827B91723001BBCD7 /* LetterView.swift */,
 				7D19BE6A27B79676001BBCD7 /* Assets.xcassets */,
 				7D19BE6C27B79676001BBCD7 /* Preview Content */,
 			);
@@ -127,6 +154,35 @@
 			path = WordlerUITests;
 			sourceTree = "<group>";
 		};
+		7D19BE9327B797A7001BBCD7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7D19BE9627B79848001BBCD7 /* Service.swift */,
+				7D19BE9827B79857001BBCD7 /* APIClient.swift */,
+				7D19BE9A27B89BAA001BBCD7 /* Constants.swift */,
+				7D19BE9C27B89EA1001BBCD7 /* RequestModel.swift */,
+				7D19BE9E27B89EA9001BBCD7 /* ResponseModel.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7D19BE9427B797C1001BBCD7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7D19BEA027B90772001BBCD7 /* Analyser.swift */,
+				7D19BEA227B90786001BBCD7 /* Models.swift */,
+				7D19BEA427B907A2001BBCD7 /* ViewModel.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7D19BE9527B797EB001BBCD7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +199,9 @@
 			dependencies = (
 			);
 			name = Wordler;
+			packageProductDependencies = (
+				7D19BE9127B79792001BBCD7 /* Alamofire */,
+			);
 			productName = Wordler;
 			productReference = 7D19BE6327B79674001BBCD7 /* Wordler.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +274,9 @@
 				Base,
 			);
 			mainGroup = 7D19BE5A27B79674001BBCD7;
+			packageReferences = (
+				7D19BE9027B79792001BBCD7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 7D19BE6427B79674001BBCD7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +319,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D19BE6927B79674001BBCD7 /* ContentView.swift in Sources */,
+				7D19BEA527B907A2001BBCD7 /* ViewModel.swift in Sources */,
+				7D19BEA127B90772001BBCD7 /* Analyser.swift in Sources */,
+				7D19BE9B27B89BAA001BBCD7 /* Constants.swift in Sources */,
+				7D19BE6927B79674001BBCD7 /* GameView.swift in Sources */,
 				7D19BE6727B79674001BBCD7 /* WordlerApp.swift in Sources */,
+				7D19BE9727B79848001BBCD7 /* Service.swift in Sources */,
+				7D19BE9F27B89EA9001BBCD7 /* ResponseModel.swift in Sources */,
+				7D19BEA327B90786001BBCD7 /* Models.swift in Sources */,
+				7D19BE9927B79857001BBCD7 /* APIClient.swift in Sources */,
+				7D19BEA727B916A1001BBCD7 /* WordView.swift in Sources */,
+				7D19BEA927B91723001BBCD7 /* LetterView.swift in Sources */,
+				7D19BE9D27B89EA1001BBCD7 /* RequestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +677,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D19BE9027B79792001BBCD7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D19BE9127B79792001BBCD7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D19BE9027B79792001BBCD7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D19BE5B27B79674001BBCD7 /* Project object */;
 }
